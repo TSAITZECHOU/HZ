@@ -5,17 +5,17 @@
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
   </head>
-  <body>
+  <body> #照篇偵測
     <a-scene mindar-image="imageTargetSrc: targets (4).mind;" color-space="sRGB" height="0.5" width="0.5" renderer="colorManagement: true; physicallyCorrectLights: true" vr-mode-ui="enabled: false" light="defaultLightsEnabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
-        <img id="card" src="完稿.無鏡框.png" />
-        <a-asset-item id="avatarModel" src="jacket/scene.gltf"></a-asset-item>
+        <img id="card" src="完稿.無鏡框.png" /> #卡牌呈現
+        <a-asset-item id="avatarModel" src="jacket/scene.gltf"></a-asset-item> #立體元件模型
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
       <a-entity mindar-image-target="targetIndex: 0" light="type: ambient; intensity: 1;">
-        <a-plane src="#card" position="0 0 0" rotation="0 0 0"></a-plane>
-        <a-gltf-model rotation="0 0 0 " position="0 -30 0.1" scale="1 1 1" src="#avatarModel" animationx="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
+        <a-plane src="#card" position="0 0 0" rotation="0 0 0"></a-plane> #卡牌呈現位置元件 
+        <a-gltf-model rotation="0 0 0 " position="0 -30 0.1" scale="1 1 1" src="#avatarModel" animationx="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> #立體元件位置成像
       </a-entity>
     </a-scene>
   </body>
